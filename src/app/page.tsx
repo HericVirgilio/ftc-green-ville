@@ -21,26 +21,26 @@ export default function Home() {
             <Image src={"/logo.png"} alt="Logo" width={190} height={114} />
           </div>
           <span>
-            <Label className="text-[#686868]" htmlFor="password">Password</Label>
+            <Label className="text-[#686868]  text-sm" htmlFor="password">Password</Label>
             <Input className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl" id="email" type="email" required />
           </span>
           <span>
-            <Label className="text-[#686868]" htmlFor="password">Password</Label>
+            <Label className="text-[#686868]  text-sm" htmlFor="password">Password</Label>
             <Input className="bg-[#DBDBDB] w-[416px] h-[62px]  rounded-2xl" id="password" type="password" required />
           </span>
 
           <div className="flex justify-between items-center">
             <span>
-              <Switch {...label} defaultChecked />
-              <span>lembrar-me</span>
+              <Switch {...label}/>
+              <span className="text-xs">lembrar-me</span>
             </span>
-            <span className="cursor-pointer">
+            <span className="cursor-pointer text-sm font-medium">
               Esqueci a senha
             </span>
           </div>
 
           <div>
-            <Button className="w-[416px] h-[47px]">Button</Button>
+            <Button className="w-[416px] h-[47px] font-semibold text-lg ">Entrar</Button>
           </div>
         </div>
       </div>
