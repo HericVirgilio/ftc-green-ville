@@ -4,12 +4,8 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Switch from '@mui/material/Switch';
-import { useState } from "react"; // Removido o useEffect
-import { Button } from "@/components/ui/button";
-import { login } from "@/services/authService";
-import { useRouter } from "next/navigation"; // Usar next/navigation em vez de next/router
-
-export const dynamic = 'force-dynamic'; // Mova isso para depois da diretiva "use client"
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -39,15 +35,8 @@ export default function Home() {
           </div>
 
           <span>
-            <Label className="text-[#686868] text-sm" htmlFor="email">Email</Label>
-            <Input
-              className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl"
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <Label className="text-[#686868]  text-sm" htmlFor="password">Email</Label>
+            <Input className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl" id="email" type="email" required />
           </span>
 
           <span>
@@ -67,9 +56,9 @@ export default function Home() {
               <Switch />
               <span className="text-xs">lembrar-me</span>
             </span>
-            <span className="cursor-pointer text-sm font-medium">
+            <Link href={"/esqueci-a-senha"} className="cursor-pointer text-sm font-medium">
               Esqueci a senha
-            </span>
+            </Link>
           </div>
 
           {error && <p className="text-red-500">{error}</p>}
