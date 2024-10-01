@@ -6,7 +6,7 @@ import Switch from '@mui/material/Switch';
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 
-export default function Home() {
+export default function CriarNovaSenha() {
 
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -20,23 +20,23 @@ export default function Home() {
           <div className="flex justify-center">
             <Image src={"/logo.png"} alt="Logo" width={190} height={114} />
           </div>
-          <span>
-            <Label className="text-[#686868]  text-sm" htmlFor="password">Email</Label>
-            <Input className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl" id="email" type="email" required />
+          <h2 className="text-xl font-normal">
+            Criar nova senha
+          </h2>
+          <span className="w-[416px] text-xs text-[#7E7E7E]">
+            Escolha uma nova senha para seu login.
           </span>
           <span>
-            <Label className="text-[#686868]  text-sm" htmlFor="password">Password</Label>
+            <Label className="text-[#686868]  text-sm" htmlFor="password">Nova senha</Label>
+            <Input className="bg-[#DBDBDB] w-[416px] h-[62px]  rounded-2xl" id="password" type="password" required />
+          </span>
+          <span>
+            <Label className="text-[#686868]  text-sm" htmlFor="password">Confirmar senha</Label>
             <Input className="bg-[#DBDBDB] w-[416px] h-[62px]  rounded-2xl" id="password" type="password" required />
           </span>
 
           <div className="flex justify-between items-center">
-            <span>
-              <Switch {...label}/>
-              <span className="text-xs">lembrar-me</span>
-            </span>
-            <Link href={"/esqueci-a-senha"} className="cursor-pointer text-sm font-medium">
-              Esqueci a senha
-            </Link>
+            <span className="font-medium text-[#ED0919] text-sm">Dados incorretos. Tente novamente.</span>
           </div>
 
           <div>
