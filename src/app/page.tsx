@@ -1,11 +1,13 @@
-"use client"; // A diretiva "use client" deve estar no topo do arquivo
-
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Switch from '@mui/material/Switch';
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { login } from "@/services/authService";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -35,12 +37,23 @@ export default function Home() {
           </div>
 
           <span>
-            <Label className="text-[#686868]  text-sm" htmlFor="password">Email</Label>
-            <Input className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl" id="email" type="email" required />
+            <Label className="text-[#686868] text-sm" htmlFor="email">
+              Email
+            </Label>
+            <Input
+              className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl"
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </span>
 
           <span>
-            <Label className="text-[#686868] text-sm" htmlFor="password">Password</Label>
+            <Label className="text-[#686868] text-sm" htmlFor="password">
+              Password
+            </Label>
             <Input
               className="bg-[#DBDBDB] w-[416px] h-[62px] rounded-2xl"
               id="password"
