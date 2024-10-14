@@ -14,7 +14,7 @@ export default function HeaderSearch(){
     return(
         <header className="flex justify-between  mb-[3%]">
                 <div>
-                    <h1>#0005</h1>
+                    <h1 className="text-2xl">#0005</h1>
                     <h5 className="font-normal text-base">{dataFormatada}</h5>
                 </div>
                 <div className="relative mt-4 w-[307px] h-[39px]">

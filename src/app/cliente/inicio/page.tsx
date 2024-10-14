@@ -1,22 +1,30 @@
-"use cliente"
+"use client";
+import React, { useState } from "react";
 import Produtos from "@/components/produtos";
 import HeaderSearch from "@/components/header-search";
 import Footer from "@/components/footer";
+import MetodoPagamento from "@/components/metodo-pagamento";
 
 export default function Inicio() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleDiv = () => {
+        setIsVisible(!isVisible);
+    };
 
     return (
         <div className="w-[80vw] m-auto mt-[3%] text-lg font-semibold">
-            
-            <HeaderSearch/>
+            <HeaderSearch />
 
-            <hr className="border-t border-[#393C49] mb-[2%]" />
+            <hr className="border-t border-[#393C49] mb-[2%]" onClick={toggleDiv} />
 
-            <Produtos/>
+            <MetodoPagamento isVisible={isVisible} toggleDiv={toggleDiv} />
 
-            <hr className="border-t border-[#393C49]  mt-[2%]" />
+            <Produtos />
 
-            <Footer/>
+            <hr className="border-t border-[#393C49] mt-[2%]" />
+
+            <Footer onSubmit={toggleDiv} />
         </div>
-    )
+    );
 }
