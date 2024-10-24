@@ -1,0 +1,50 @@
+#TabelaContainerEstoque {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto; 
+}
+
+table {
+    width: 100%;      
+    border-collapse: collapse; 
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.StyleAll {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.StyleId {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1%;
+}
+
+.DescricaoRelatorioVendas {
+    font-size: 12px;
+    font-weight: 500;   
+}
+
+#QuantVendas {
+    text-align: center;
+}
+
+.ContainerImagensNuvemVendas {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+#TituloTable {
+    font-size: 16px;
+    letter-spacing: -1%;
+    font-weight: 800;
+}

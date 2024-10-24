@@ -3,6 +3,7 @@ import HomeBar from "@/components/home-bar";
 import HeaderTable from "@/components/header-table";
 import LinhaHorizontal from "@/components/linha-horizontal";
 import TabelaRelatorioVendas from "@/components/tabela-relatorio-vendas";
+import TabelaEstoque from "@/components/tabela-estoque";
 export default function Admin() {
     return (
         <div className="bg-[#131313] w-full min-h-screen pl-[306px] overflow-y-auto">
@@ -21,7 +22,7 @@ export default function Admin() {
                         padding: "20px",
                         borderRadius: '30px'
                     }}>
-                    <HeaderTable />
+                    <HeaderTable titulo="Relatório de vendas"/>
                     <LinhaHorizontal />
                     <TabelaRelatorioVendas/>
                 </div>
@@ -34,8 +35,9 @@ export default function Admin() {
                         padding: "20px",
                         borderRadius: '30px'
                     }}>
-                    <HeaderTable />
+                    <HeaderTable  titulo="Estoque"/>
                     <LinhaHorizontal />
+                    <TabelaEstoque/>
                 </div>
             </div>
         </div>

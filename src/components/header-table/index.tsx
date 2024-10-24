@@ -2,13 +2,13 @@ import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react";
 import { ComboboxDemo } from "@/components/ui/combobox-demo";
 
-export default function HeaderTable(){
+export default function HeaderTable(Props: {titulo: string}){
     return(
         <div className="flex justify-between items-center p-1">
         <span>
             <h5 
                 className="font-bold text-xl"
-            >Relatório de vendas</h5>
+            >{Props.titulo}</h5>
         </span>
         <span className="flex gap-8">
             <div className="relative">
