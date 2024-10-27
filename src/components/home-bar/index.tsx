@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { ListaAdmData } from "@/data/lista-ad.data"
+import Link from "next/link"
 
 export default function HomeBar() {
     return (
@@ -9,13 +10,13 @@ export default function HomeBar() {
 
             <div className="w-[200px] grid gap-8 mt-10 relative">
                 {ListaAdmData.map((obejto, index) => (
-                    <span key={index} className="flex w-[100%] h-[20px] justify-between items-center">
+                    <Link href={obejto.link} key={index} className="flex w-[100%] h-[20px] justify-between items-center">
                         <Image src={obejto.img} alt="icones imagens" width={obejto.w} height={obejto.h} />
                         <span
                             className=" text-lg text-[#DBDBDB]"
                         >{obejto.titulo}</span>
                         <Image src={"/arrow.png"} alt="seta" width={22} height={14} />
-                    </span>
+                    </Link>
                 ))}
             </div>
 

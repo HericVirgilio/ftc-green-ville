@@ -3,4 +3,5 @@ export interface ListaAdmConteudo{
     titulo: string,
     w: number,
     h: number,
+    link: string
 }

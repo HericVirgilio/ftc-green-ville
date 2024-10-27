@@ -1,69 +1,70 @@
 import Image from "next/image";
 import "./style.css";
+import { BotaoDetalhes } from "../botao-detalhes";
 
 export default function TabelaRelatorioVendas() {
-    const salesData = [
-        {
-          id: '#0004',
-          description: '(2) arroz x, (1) feijão...',
-          quantity: 1000,
-          totalValue: 'R$464.99',
-          date: '17/06/2024',
-          receiptImg: '/download-nuvem.png',
-          detailsImg: '/Detalhes.png',
-          deleteImg: '/Apagar.png',
-        },
-        {
-          id: '#0003',
-          description: '(2) arroz x, (1) feijão...',
-          quantity: 1000,
-          totalValue: 'R$464.99',
-          date: '17/06/2024',
-          receiptImg: '/download-nuvem.png',
-          detailsImg: '/Detalhes.png',
-          deleteImg: '/Apagar.png',
-        },
-        {
-          id: '#0005',
-          description: '(2) arroz x, (1) feijão...',
-          quantity: 1000,
-          totalValue: 'R$464.99',
-          date: '17/06/2024',
-          receiptImg: '/download-nuvem.png',
-          detailsImg: '/Detalhes.png',
-          deleteImg: '/Apagar.png',
-        },
-        {
-          id: '#0007',
-          description: '(2) arroz x, (1) feijão...',
-          quantity: 1000,
-          totalValue: 'R$464.99',
-          date: '17/06/2024',
-          receiptImg: '/download-nuvem.png',
-          detailsImg: '/Detalhes.png',
-          deleteImg: '/Apagar.png',
-        },
-        {
-            id: '#0007',
-            description: '(2) arroz x, (1) feijão...',
-            quantity: 1000,
-            totalValue: 'R$464.99',
-            date: '17/06/2024',
-            receiptImg: '/download-nuvem.png',
-            detailsImg: '/Detalhes.png',
-            deleteImg: '/Apagar.png',
-          },
-          {
-            id: '#0007',
-            description: '(2) arroz x, (1) feijão...',
-            quantity: 1000,
-            totalValue: 'R$464.99',
-            date: '17/06/2024',
-            receiptImg: '/download-nuvem.png',
-            detailsImg: '/Detalhes.png',
-            deleteImg: '/Apagar.png',
-          },
-      ];
+  const salesData = [
+    {
+      id: '#0004',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+    {
+      id: '#0003',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+    {
+      id: '#0005',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+    {
+      id: '#0007',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+    {
+      id: '#0007',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+    {
+      id: '#0007',
+      description: '(2) arroz x, (1) feijão...',
+      quantity: 1000,
+      totalValue: 'R$464.99',
+      date: '17/06/2024',
+      receiptImg: '/download-nuvem.png',
+      detailsImg: '/Detalhes.png',
+      deleteImg: '/Apagar.png',
+    },
+  ];
 
   return (
     <div id="TabelaContainer">
@@ -96,7 +97,7 @@ export default function TabelaRelatorioVendas() {
               </td>
               <td id="QuantVendas" className="StyleAll">
                 <span className="ContainerImagensNuvemVendas">
-                  <Image src={sale.detailsImg} alt="Detalhes" width={88} height={35} />
+                  <BotaoDetalhes/>
                 </span>
               </td>
               <td id="QuantVendas" className="StyleAll">
