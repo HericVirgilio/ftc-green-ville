@@ -39,8 +39,8 @@ export default function MetodoPagamento({ isVisible, toggleDiv }: MetodoPagament
                     <div className="mt-[5%] grid gap-6">
                         <h3>Método de pagamentos</h3>
                         <div className="flex justify-around items-center">
-                            {MetodoPagamentoData.map((objeto) => (
-                                <div className=" cursor-pointer grid justify-center items-center w-[101px] h-[64px] rounded-lg p-3" style={{
+                            {MetodoPagamentoData.map((objeto, index) => (
+                                <div className=" cursor-pointer grid justify-center items-center w-[101px] h-[64px] rounded-lg p-3" key={index} style={{
                                     background: 'linear-gradient(to bottom right, #2D2D2D, #050505)',
                                 }}>
                                     <div className="w-[100%] grid justify-center items-center">

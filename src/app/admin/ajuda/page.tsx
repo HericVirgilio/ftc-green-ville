@@ -3,9 +3,14 @@ import HomeBar from "@/components/home-bar";
 import Image from "next/image";
 import { useState } from "react";
 import { AJudaData } from "@/data/ajuda.data";
+import { useEffect } from "react";
 
 export default function Ajuda() {
     const [isEditing, setIsEditing] = useState(false);
+
+    useEffect(() => {
+        
+    },[isEditing])
 
     const handleEditClick = () => {
         setIsEditing(true);

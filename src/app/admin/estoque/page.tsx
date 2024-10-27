@@ -17,7 +17,7 @@ export default function Vendas() {
                     >Produtos com pouco Estoque: </h5>
                     <div className="flex justify-between relative">
                         {ProdutosPoucoEstoqueData.map((objeto, index) => (
-                            <div className="relative">
+                            <div className="relative" key={index}>
                                 <div className="w-[190px] h-[125px] flex items-center justify-center" style={{
                                     backgroundImage: `url(${objeto.img})`,
                                     backgroundRepeat: 'no-repeat',

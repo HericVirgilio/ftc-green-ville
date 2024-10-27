@@ -1,4 +1,6 @@
-export const ProdutosPoucoEstoqueData: any [] = [
+import { ProdutosPoucoEstoqueInterface } from "@/interface/produtos-pouco-estoque.interface"
+
+export const ProdutosPoucoEstoqueData: ProdutosPoucoEstoqueInterface [] = [
     {
         img: '/feijao.png',
         text: 'Feijão'
@@ -14,5 +16,5 @@ export const ProdutosPoucoEstoqueData: any [] = [
     {
         img: '/azeitona.png',
         text: 'Azeitonas'
-    },
+    }
 ]

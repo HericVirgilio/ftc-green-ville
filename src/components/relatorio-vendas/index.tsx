@@ -7,7 +7,6 @@ import {
     AlertDialogDescription,
     AlertDialogFooter,
     AlertDialogHeader,
-    AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 
@@ -16,7 +15,7 @@ export default function RelatorioVendas() {
     return (
         <div className="w-[100%] h-[1000px] mt-[30px]">
             {relatorioVendasData.map((objeto, index) => (
-                <div className="grid grid-cols-2 p-[20px] mb-[20px] bg-[#252525] rounded-2xl">
+                <div className="grid grid-cols-2 p-[20px] mb-[20px] bg-[#252525] rounded-2xl" key={index}>
                     <div className="grid items-center">
                         <div className="text-xl font-bold">Código de venda: {objeto.num_venda}</div>
                         <div><span className="font-bold text-xs">Descrição</span>: {objeto.descricao}</div>

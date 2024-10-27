@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Produtos(){
     return(
         <main className="w-[75vw] m-auto">
-                {ProdutosData.map((objeto) => (
-                    <div className="flex justify-between mb-[1%]">
+                {ProdutosData.map((objeto, index) => (
+                    <div className="flex justify-between mb-[1%]" key={index}>
                         <div className="flex justify-center items-center gap-10">
                             <Image className="rounded-full" src={objeto.img} alt="produto" width={40} height={40} />
                             <span>{objeto.text}</span>
