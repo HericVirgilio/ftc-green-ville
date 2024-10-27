@@ -3,7 +3,7 @@ import HomeBar from "@/components/home-bar";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Usuarios() {
+export default function Ajuda() {
     const [isEditing, setIsEditing] = useState(false);
 
     const handleEditClick = () => {
