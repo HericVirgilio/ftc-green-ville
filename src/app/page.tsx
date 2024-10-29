@@ -8,6 +8,7 @@ import Switch from '@mui/material/Switch';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Chatwoot from "@/components/chat";
+import { login } from "@/services/authService";
 
 export default function Home() {
   const [email, setEmail] = useState("");
