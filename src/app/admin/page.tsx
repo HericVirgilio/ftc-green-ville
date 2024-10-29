@@ -4,6 +4,8 @@ import HeaderTable from "@/components/header-table";
 import LinhaHorizontal from "@/components/linha-horizontal";
 import TabelaRelatorioVendas from "@/components/tabela-relatorio-vendas";
 import TabelaEstoque from "@/components/tabela-estoque";
+import Chatwoot from "@/components/chat";
+
 export default function Admin() {
     return (
         <div className="bg-[#131313] w-full min-h-screen pl-[306px] overflow-y-auto">
@@ -40,6 +42,7 @@ export default function Admin() {
                     <TabelaEstoque/>
                 </div>
             </div>
+            <Chatwoot/>
         </div>
     )
 }

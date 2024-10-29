@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label"
 import Switch from '@mui/material/Switch';
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
+import Chatwoot from "@/components/chat";
 
 export default function Home() {
 
@@ -44,6 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Chatwoot/>
     </div>
   );
 }
