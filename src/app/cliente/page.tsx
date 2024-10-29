@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Chatwoot from "@/components/chat";
 
 export default function Cliente() {
     return (
@@ -22,7 +23,7 @@ export default function Cliente() {
                     <span>Iniciar</span>
                 </Link>
             </div>
-
+            <Chatwoot/>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import Produtos from "@/components/produtos";
 import HeaderSearch from "@/components/header-search";
 import Footer from "@/components/footer";
 import MetodoPagamento from "@/components/metodo-pagamento";
+import Chatwoot from "@/components/chat";
 
 export default function Inicio() {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,7 @@ export default function Inicio() {
             <hr className="border-t border-[#393C49] mt-[2%]" />
 
             <Footer onSubmit={toggleDiv} />
+            <Chatwoot/>
         </div>
     );
 }

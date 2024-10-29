@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { AJudaData } from "@/data/ajuda.data";
 import { useEffect } from "react";
+import Chatwoot from "@/components/chat";
 
 export default function Ajuda() {
     const [isEditing, setIsEditing] = useState(false);
@@ -114,6 +115,7 @@ export default function Ajuda() {
                     ))}
                 </div>
             </div>
+            <Chatwoot/>
         </div>
     );
 }

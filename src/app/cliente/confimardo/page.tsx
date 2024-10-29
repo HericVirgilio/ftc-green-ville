@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Chatwoot from "@/components/chat";
 
 export default function Confirmado() {
     return (
@@ -21,7 +22,7 @@ export default function Confirmado() {
                     <span>Nova compra</span>
                 </Link>
             </div>
-
+            <Chatwoot/>
         </div>
     );
 }

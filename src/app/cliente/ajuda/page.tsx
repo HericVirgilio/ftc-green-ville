@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AJudaData } from "@/data/ajuda.data";
 import { useState } from "react"; // Importa o useState
+import Chatwoot from "@/components/chat";
 
 export default function Ajuda() {
     const [abertas, setAbertas] = useState<Array<boolean>>(Array(AJudaData.length).fill(false)); 
@@ -60,6 +61,7 @@ export default function Ajuda() {
                     </div>
                 ))}
             </div>
+            <Chatwoot/>
         </div>
     );
 }

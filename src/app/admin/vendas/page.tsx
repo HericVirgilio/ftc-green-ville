@@ -2,6 +2,8 @@
 import HomeBar from "@/components/home-bar";
 import HeaderTable from "@/components/header-table";
 import RelatorioVendas from "@/components/relatorio-vendas";
+import Chatwoot from "@/components/chat";
+
 export default function Vendas() {
     return (
         <div className="bg-[#131313] w-full min-h-screen pl-[306px] overflow-y-auto">
@@ -20,6 +22,7 @@ export default function Vendas() {
                     <RelatorioVendas/>
                 </div>
             </div>
+            <Chatwoot/>
         </div>
     )
 }

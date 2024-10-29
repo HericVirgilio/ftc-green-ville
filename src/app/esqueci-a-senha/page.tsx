@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
+import Chatwoot from "@/components/chat";
 
 export default function Esqueci_a_Senha() {
     return (
@@ -35,6 +36,7 @@ export default function Esqueci_a_Senha() {
                     </div>
                 </div>
             </div>
+            <Chatwoot/>
         </div>
     )
 }

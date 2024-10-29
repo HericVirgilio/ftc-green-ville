@@ -2,6 +2,7 @@
 import HomeBar from "@/components/home-bar";
 import Image from "next/image";
 import { useState } from "react";
+import Chatwoot from "@/components/chat";
 
 export default function Usuarios() {
     const [isEditing, setIsEditing] = useState(false);
@@ -84,6 +85,7 @@ export default function Usuarios() {
                     )}
                 </div>
             </div>
+            <Chatwoot/>
         </div>
     );
 }
