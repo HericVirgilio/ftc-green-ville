@@ -1,7 +1,6 @@
 "use client"
 import HomeBar from "@/components/home-bar";
 import HeaderTable from "@/components/header-table";
-import RelatorioVendas from "@/components/relatorio-vendas";
 import Chatwoot from "@/components/chat";
 
 export default function Vendas() {
@@ -19,7 +18,6 @@ export default function Vendas() {
                         borderRadius: '30px'
                     }}>
                     <HeaderTable titulo="Produtos:"/>
-                    <RelatorioVendas/>
                 </div>
             </div>
             <Chatwoot/>
