@@ -19,11 +19,11 @@ type User = {
 
 export default function Usuarios() {
     const [isEditing, setIsEditing] = useState(false);
-    const [users, setUsers] = useState<User[]>([]); // Tipo array de User
-    const [selectedUser, setSelectedUser] = useState<User | null>(null); // User ou null
+    const [users, setUsers] = useState<User[]>([]); 
+    const [selectedUser, setSelectedUser] = useState<User | null>(null); 
     const [isNewUser, setIsNewUser] = useState(false);
 
-    // Função para carregar usuários
+   
     const fetchUsers = async () => {
         try {
             const data = await listUsers();
@@ -33,7 +33,7 @@ export default function Usuarios() {
         }
     };
 
-    // Carregar a lista de usuários ao montar o componente
+   
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -59,11 +59,11 @@ export default function Usuarios() {
     const handleSaveUser = async () => {
         try {
             if (isNewUser && selectedUser) {
-                // Criação de um novo usuário
+               
                 const newUser = {
                     ...selectedUser,
-                    phone: selectedUser.phone || "", // Converte undefined para string vazia
-                    password: selectedUser.password || "" // Converte undefined para string vazia
+                    phone: selectedUser.phone || "", 
+                    password: selectedUser.password || "" 
                 };
                 await createUser(newUser);
                 alert("Usuário criado com sucesso.");
@@ -72,14 +72,14 @@ export default function Usuarios() {
                 const updatedUser = {
                     ...selectedUser,
                     id: selectedUser.id,
-                    phone: selectedUser.phone || "", // Converte undefined para string vazia
-                    password: selectedUser.password || "" // Converte undefined para string vazia
+                    phone: selectedUser.phone || "", 
+                    password: selectedUser.password || "" 
                 };
                 await updateUser(updatedUser);
                 alert("Usuário atualizado com sucesso.");
             }
             handleCloseEdit();
-            await fetchUsers(); // Atualiza a lista de usuários após salvar
+            await fetchUsers(); 
         } catch (error) {
             console.error("Erro ao salvar usuário:", error);
             alert("Erro ao salvar usuário.");
@@ -93,7 +93,7 @@ export default function Usuarios() {
             try {
                 await deleteUser(userId);
                 alert("Usuário excluído com sucesso.");
-                await fetchUsers(); // Atualiza a lista de usuários após a exclusão
+                await fetchUsers(); 
             } catch (error) {
                 console.error("Erro ao excluir usuário:", error);
                 alert("Erro ao excluir usuário.");
@@ -131,7 +131,7 @@ export default function Usuarios() {
                                 <button
                                     className="bg-red-500 text-white px-2 py-1 rounded mt-2"
                                     onClick={(e) => {
-                                        e.stopPropagation(); // Evita abrir o modal de edição ao clicar em excluir
+                                        e.stopPropagation(); 
                                         handleDeleteUser(user.id!);
                                     }}
                                 >

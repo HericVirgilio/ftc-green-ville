@@ -4,16 +4,16 @@ import HomeBar from "@/components/home-bar";
 import HeaderTable from "@/components/header-table";
 import LinhaHorizontal from "@/components/linha-horizontal";
 import TabelaRelatorioVendas from "@/components/tabela-relatorio-vendas";
-import ProductList from "@/components/ProductList"; // Importar o componente reutilizável
+import ProductList from "@/components/ProductList"; 
 import Chatwoot from "@/components/chat";
-import { listProducts, deleteProduct } from "@/services/productsService"; // Importar serviços
-import { Product } from "@/types/productTypes"; // Importar o tipo Product
+import { listProducts, deleteProduct } from "@/services/productsService"; 
+import { Product } from "@/types/productTypes"; 
 
 
 export default function Admin() {
     const [products, setProducts] = useState<Product[]>([]);
 
-    // Função para buscar produtos da API
+  
     const fetchProducts = async () => {
         try {
             const allProducts = await listProducts();
@@ -24,12 +24,12 @@ export default function Admin() {
         }
     };
 
-    // Função para deletar produto
+
     const handleDelete = async (id: string) => {
         try {
-            await deleteProduct(id); // Deleta o produto pelo ID
+            await deleteProduct(id);
             alert("Produto deletado com sucesso!");
-            fetchProducts(); // Atualiza a lista após a exclusão
+            fetchProducts(); 
         } catch (error) {
             console.error("Erro ao deletar produto:", error);
             alert("Erro ao deletar produto.");
@@ -37,7 +37,7 @@ export default function Admin() {
     };
 
 
-    // Buscar produtos ao montar o componente
+
     useEffect(() => {
         fetchProducts();
     }, []);

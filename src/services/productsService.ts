@@ -2,7 +2,7 @@
 import axios from "axios";
 import Cookies from 'js-cookie';
 import { API_BASE_URL } from "@/config/config";
-import { Product } from "@/types/productTypes"; // Importando o tipo
+import { Product } from "@/types/productTypes"; 
 
 const PRODUCTS_URL = `${API_BASE_URL}/products`;
 const PRODUCT_DETAIL_URL = `${API_BASE_URL}/productDetail`;
@@ -17,7 +17,7 @@ const getAuthHeaders = () => {
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
-// Função para listar produtos
+
 export const listProducts = async (): Promise<Product[]> => {
   try {
     const response = await axios.get(PRODUCTS_URL, { headers: getAuthHeaders() });
@@ -28,7 +28,7 @@ export const listProducts = async (): Promise<Product[]> => {
   }
 };
 
-// Função para criar produto
+
 export const createProduct = async (productData: Omit<Product, 'id'>): Promise<Product> => {
   try {
     const response = await axios.post(PRODUCTS_URL, productData, { headers: getAuthHeaders() });
@@ -39,7 +39,7 @@ export const createProduct = async (productData: Omit<Product, 'id'>): Promise<P
   }
 };
 
-// Função para atualizar produto
+
 export const updateProduct = async (productData: Partial<Product> & { id: string | null }): Promise<Product> => {
     try {
         const response = await axios.put(PRODUCTS_URL, productData, { headers: getAuthHeaders() });
@@ -51,7 +51,7 @@ export const updateProduct = async (productData: Partial<Product> & { id: string
 };
 
 
-// Função para deletar produto
+
 export const deleteProduct = async (productId: string): Promise<void> => {
   try {
     const response = await axios.delete(PRODUCTS_URL, {
@@ -65,7 +65,7 @@ export const deleteProduct = async (productId: string): Promise<void> => {
   }
 };
 
-// Função para obter detalhes de um produto
+
 export const getProductDetail = async (identifier: string): Promise<Product> => {
   try {
     const response = await axios.get(`${PRODUCT_DETAIL_URL}?identifier=${identifier}`, { headers: getAuthHeaders() });
@@ -76,7 +76,7 @@ export const getProductDetail = async (identifier: string): Promise<Product> => 
   }
 };
 
-// Função para listar produtos com baixo estoque
+
 export const getLowStockProducts = async (): Promise<Product[]> => {
   try {
     const response = await axios.get(PRODUCT_STOCK_URL, { headers: getAuthHeaders() });
