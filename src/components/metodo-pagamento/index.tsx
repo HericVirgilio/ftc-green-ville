@@ -2,6 +2,7 @@ import { MetodoPagamentoData } from "@/data/metodo-pagamento.data";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 interface MetodoPagamentoProps {
     isVisible: boolean;
@@ -78,9 +79,9 @@ export default function MetodoPagamento({ isVisible, toggleDiv }: MetodoPagament
                     <span className=" cursor-pointer bg-[#131313] text-[#fff] border-2 w-[156px] h-[47px] rounded-md flex items-center justify-center">
                         <span>Cancelar</span>
                     </span>
-                    <span className=" cursor-pointer bg-[#fff] text-[#000] rounded-md w-[156px] h-[47px] flex items-center justify-center">
+                    <Link href={"/cliente/concluido"} className=" cursor-pointer bg-[#fff] text-[#000] rounded-md w-[156px] h-[47px] flex items-center justify-center">
                         <span>Confirmar</span>
-                    </span>
+                    </Link>
                 </div>
             </div>
     )

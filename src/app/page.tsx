@@ -40,9 +40,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <div>
+          <Link href={"/cliente"}>
             <Button className="w-[416px] h-[47px] font-semibold text-lg ">Entrar</Button>
-          </div>
+          </Link>
         </div>
       </div>
       <Chatwoot/>
