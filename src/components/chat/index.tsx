@@ -2,10 +2,12 @@
 import { useEffect } from 'react';
 
 declare global {
-    interface Window {
-      chatwootSDK?: any;
-    }
+  interface Window {
+    chatwootSDK?: {
+      run: (config: { websiteToken: string; baseUrl: string }) => void;
+    };
   }
+}
 
 const Chatwoot = () => {
   useEffect(() => {
@@ -35,7 +37,7 @@ const Chatwoot = () => {
     loadChatwootScript();
   }, []);
 
-  return null; 
+  return null;
 };
 
 export default Chatwoot;
